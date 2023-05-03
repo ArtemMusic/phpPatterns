@@ -3,38 +3,38 @@
 // Порождающий шаблон, создает объект, который является единственным в своем роде (я, солнце, алина)
 // Например 1 соединение к бд (не может быть 2 соединения к бд)
 
-final class Connection // final означает, что класс нельзя будет наследовать в будущем
-{
-    private static ?self $instance = null;
-    private static string $name;
-
-    public static function getName(): string
-    {
-        return self::$name;
-    }
-
-    public static function setName(string $name): void
-    {
-        self::$name = $name;
-    }
-
-    //Если объект $instance уже есть, то верни его, иначе создай
-    public static function getInsnatce(): self
-    {
-        return self::$instance ?: self::$instance = new self();
-    }
-
-    //Запретили клонировать (private и пустое тело)
-    private function __clone(): void
-    {
-        // TODO: Implement __clone() method.
-    }
-}
-
-$connection = Connection::getInsnatce();
-$connection::setName('ComandF5');
-$connection2 = Connection::getInsnatce();
-var_dump($connection2::getName());
+//final class Connection // final означает, что класс нельзя будет наследовать в будущем
+//{
+//    private static ?self $instance = null;
+//    private static string $name;
+//
+//    public static function getName(): string
+//    {
+//        return self::$name;
+//    }
+//
+//    public static function setName(string $name): void
+//    {
+//        self::$name = $name;
+//    }
+//
+//    //Если объект $instance уже есть, то верни его, иначе создай
+//    public static function getInsnatce(): self
+//    {
+//        return self::$instance ?: self::$instance = new self();
+//    }
+//
+//    //Запретили клонировать (private и пустое тело)
+//    private function __clone(): void
+//    {
+//
+//    }
+//}
+//
+//$connection = Connection::getInsnatce();
+//$connection::setName('ComandF5');
+//$connection2 = Connection::getInsnatce();
+//var_dump($connection2::getName());
 
 //Этот код реализует паттерн Singleton (одиночка) - пораждающий шаблон проектирования, который гарантирует, что у класса может быть только один единственный экземпляр.
 //

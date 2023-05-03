@@ -2,38 +2,38 @@
 
 //Суть factory - один класс создает другой
 
-class Worker
-{
-    private string $name;
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setName(string $name): void
-    {
-        $this->name = $name;
-    }
-}
-
-class WorkerFactory
-{
-    public static function make(): Worker
-    {
-        return new Worker();
-    }
-}
-
-$worker = WorkerFactory::make();
-$worker->setName('artem');
-print_r($worker->getName());
+//class Worker
+//{
+//    private string $name;
+//
+//    /**
+//     * @return string
+//     */
+//    public function getName(): string
+//    {
+//        return $this->name;
+//    }
+//
+//    /**
+//     * @param string $name
+//     */
+//    public function setName(string $name): void
+//    {
+//        $this->name = $name;
+//    }
+//}
+//
+//class WorkerFactory
+//{
+//    public static function make(): Worker
+//    {
+//        return new Worker();
+//    }
+//}
+//
+//$worker = WorkerFactory::make();
+//$worker->setName('artem');
+//print_r($worker->getName());
 
 //Данный код реализует паттерн "Фабрика" (Factory). Суть паттерна заключается в том, что есть один класс (фабрика), который создает объекты другого класса (продукт) и возвращает их в зависимости от переданных параметров.
 //
